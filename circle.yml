@@ -1,10 +1,3 @@
-machine:
-  environment:
-    CIRCLE_BUILD_DIR: $HOME/$CIRCLE_PROJECT_REPONAME
-    PATH: $PATH:$CIRCLE_BUILD_DIR/bin
-  post:
-    - mkdir -p $CIRCLE_BUILD_DIR/bin
-
 checkout:
   post:
     - git submodule sync
@@ -18,7 +11,7 @@ dependencies:
 
 test:
   override:
-    - cd $HOME/$CIRLCE_PROJECT_REPONAME && hugo
+    - cd $HOME/$CIRCLE_PROJECT_REPONAME && hugo
 
 deployment:
   production:
