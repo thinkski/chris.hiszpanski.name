@@ -1,3 +1,240 @@
+# Page settings
+
+baseurl = "//chris.hiszpanski.name/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-baseurl = "http://example.org/"
+title = "Chris Hiszpanski"
+theme = "hugo-orbit-theme"
+googleAnalytics = "UA-92228276-1"
+
+# Do not build files for websites. Need them? Set to false
+disableRSS = true
+disableSitemap = true
+disable404 = false
+
+[params]
+
+# Meta
+    description = "Ahoy!"
+    author = "Chris Hiszpanski"
+
+# Theme styles
+
+    # The original template comes with 6 colour schemes. You may choose styles below.
+    # "styles.css", "styles-2.css", "styles-3.css", "styles-4.css", "styles-5.css", "styles-6.css"
+    # are available. Also the source LESS files are included so
+    # it’s quick and easy to change the styling and colour scheme.
+
+    styles = "styles.css"
+
+# Sidebar sections
+
+    # Profile section
+    [params.profile]
+        name = "Chris Hiszpanski"
+        tagline = "Full Stack Developer"
+        avatar = "profile.png"
+
+    # Contact section
+    [params.contact]
+        enable = true
+
+        [[params.contact.list]]
+        class = "location"
+        icon = "fa-map-marker"
+        title = "San Francisco Bay Area"
+
+        [[params.contact.list]]
+        class = "email"
+        icon = "fa-envelope"
+        url = "mailto: chris@hiszpanski.name"
+        title = "chris@hiszpanski.name"
+
+        [[params.contact.list]]
+        class = "phone"
+        icon = "fa-phone"
+        url = "tel:+1234567890"
+        title = "+1 (650) 394-5862"
+
+        [[params.contact.list]]
+        class = "github"
+        icon = "fa-github"
+        url = "//github.com/thinkski"
+        title = "github.com/thinkski"
+
+        [[params.contact.list]]
+        class = "gpg"
+        icon = "fa-key"
+        url = "publickey.chris@hiszpanski.name.txt"
+        title = "public key"
+        download = true
+
+    # Education section
+    [params.education]
+        enable = true
+        title = "Education"
+
+        [[params.education.list]]
+        degree = "MSc in Electrical Engineering"
+        college = "Caltech"
+        dates = "2006 - 2007"
+
+        [[params.education.list]]
+        degree = "BSc in Electrical Engineering"
+        college = "Caltech"
+        dates = "2002 - 2006"
+
+    # Languages section
+    [params.languages]
+        enable = true
+        title = "Languages"
+
+        [[params.languages.list]]
+        language = "English"
+        level = "Native"
+
+        [[params.languages.list]]
+        language = "Polish"
+        level = "Fluent"
+
+        [[params.languages.list]]
+        language = "Italian"
+        level = "Novice"
+
+        [[params.languages.list]]
+        language = "French"
+        level = "Novice"
+
+    # Interests section
+    [params.interests]
+        enable = true
+        title = "Interests"
+
+        [[params.interests.list]]
+        interest = "Artificial intelligence"
+
+        [[params.interests.list]]
+        interest = "Board games"
+
+        [[params.interests.list]]
+        interest = "Computer vision"
+
+        [[params.interests.list]]
+        interest = "Cryptography"
+
+        [[params.interests.list]]
+        interest = "Distributed systems"
+
+        [[params.interests.list]]
+        interest = "Embedded systems"
+
+        [[params.interests.list]]
+        interest = "Gardening"
+
+        [[params.interests.list]]
+        interest = "Minimalism"
+
+        [[params.interests.list]]
+        interest = "Sailing"
+
+        [[params.interests.list]]
+        interest = "Security"
+
+        [[params.interests.list]]
+        interest = "Signal processing"
+
+        [[params.interests.list]]
+        interest = "Skiing"
+
+# Main body sections
+
+    # You may use markdown in summary, details and intro fields. But don't overdose, it's resume!:)
+
+    # Summary section
+    [params.summary]
+        enable = true
+        icon = "fa-user"
+        title = "Chris Hiszpanski"
+        summary = "Thinker. Doer. Expertise in cloud architecture, computer vision, deep learning, embedded systems, security, and signal processing. Interested in working on challenging technical problems which combat evil and make the world, and particularly the United States, a better place to live."
+
+    # Experiences section
+    [params.experiences]
+        enable = true
+        icon = "fa-briefcase"
+        title = "Experiences"
+
+        [[params.jobs.list]]
+        position = "Chief Architect"
+        dates = "2014 - Present"
+        company = "Kuna, San Bruno, California"
+        url = "https://getkuna.com"
+        logo = "kuna.png"
+        details = "First hire. Built-out much of the early camera firmware, backend cloud architecture, automated testing and CI/CD workflow. Gave birth to Sight, a horizontally scalable, low-latency, cost-efficient, and high-accuracy computer vision pipeline for detecting objects of interest via deep convolutional neural networks on a GPU cluster. Focused on making homes and neighborhoods safer for customers via intelligent camera networks a reality, a neighborhood watch for the 21st century."
+
+        [[params.jobs.list]]
+        position = "Lead Embedded Software Engineer"
+        dates = "2013 - 2014"
+        company = "Airware, San Francisco, California"
+        url = "https://airware.com"
+        logo = "airware.png"
+        details = "Led firmware team, setting direction and managing sprints. Designed single-board computer for new UAV autopilot product (fixed-wing, quad-copter, VTOL). Developed board support packages for embedded Linux and Micrium uC/OS-II. Designed bootloader and other safety-critical firmware components."
+
+        [[params.jobs.list]]
+        position = "Software and Hardware Engineer"
+        dates = "2006 - 2013"
+        company = "U.S. Department of Defense, Washington, D.C."
+        logo = "dod.png"
+
+        [[params.jobs.list]]
+        position = "Intern"
+        dates = "2002"
+        company = "Jet Propulsion Laboratory, Pasadena, California"
+        logo = "jpl.png"
+        details = "Designed a firmware bootloader for Rocky 7, a terrestrial testbed for the Mars Exploration Rover (MER). Bootloader instances embedded within rover peripherals accepted Microchip PIC firmware from a VxWorks on-board computer, enabling remote firmware upgrades. Received a full-time firmware engineer job offer based on results."
+
+    # Projects section
+    [params.projects]
+        enable = true
+        icon = "fa-archive"
+        title = "Projects"
+
+        [[params.projects.list]]
+        title = "Hashpipe"
+        url = "https://github.com/thinkski/hashpipe"
+        tagline = "VHDL implementation of a systolic SHA-256 hashing engine for Bitcoin. 10x more hashes per joule than a GPU."
+        year = "2011"
+
+        [[params.projects.list]]
+        title = "iTrack"
+        url = "https://www.scribd.com/document/92697088/Circuit-Cellar-199-Feb-2007"
+        tagline = "Published in Circuit Cellar Issue #199. DSP-Based Vehicle Monitoring."
+        year = "2006"
+
+        [[params.projects.list]]
+        title = "Solf"
+        url = "https://github.com/thinkski/solf"
+        tagline = "Interactive solvent finder for chemical engineers"
+        year = "2011"
+
+        [[params.projects.list]]
+        title = "Sorad"
+        url = "https://sorad.io"
+        tagline = "Software-defined radio. A swiss army knife for real-time signal processing."
+        year = "2007 - Present"
+
+        [[params.projects.list]]
+        title = "ValentineGL"
+        url = "https://github.com/thinkski/ValentineGL"
+        tagline = "Beating heart screensaver for Mac OS X. Marching cubes algorithm in OpenGL."
+        year = "2012"
+
+    # Footer section
+
+    # The original template is released under the Creative Commons Attribution 3.0 License.
+    # Please keep the original attribution link when using for your own project.
+    # If you'd like to use the template without the attribution,
+    # you can check out other license options via template author's website: themes.3rdwavemedia.com
+    # 
+    # As for Hugo port you may rewrite the "Ported for..." line with setting your name below.
+
+    [params.footer]
+        copyright = "Chris Hiszpanski. All rights reserved."
