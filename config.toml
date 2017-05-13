@@ -199,31 +199,31 @@ disable404 = false
 
         [[params.projects.list]]
         title = "Hashpipe"
-        url = "https://github.com/thinkski/hashpipe"
+        url = "//github.com/thinkski/hashpipe"
         tagline = "VHDL implementation of a systolic SHA-256 hashing engine for Bitcoin. 10x more hashes per joule than a GPU."
         year = "2011"
 
         [[params.projects.list]]
         title = "iTrack"
-        url = "https://www.scribd.com/document/92697088/Circuit-Cellar-199-Feb-2007"
+        url = "//www.scribd.com/document/92697088/Circuit-Cellar-199-Feb-2007"
         tagline = "Published in Circuit Cellar Issue #199. DSP-Based Vehicle Monitoring."
         year = "2006"
 
         [[params.projects.list]]
         title = "Solf"
-        url = "https://github.com/thinkski/solf"
+        url = "//thinkski.github.io/solf"
         tagline = "Interactive solvent finder for chemical engineers"
-        year = "2011"
+        year = "2012"
 
         [[params.projects.list]]
         title = "Sorad"
-        url = "https://sorad.io"
+        url = "//sorad.io"
         tagline = "Software-defined radio. A swiss army knife for real-time signal processing."
         year = "2007 - Present"
 
         [[params.projects.list]]
         title = "ValentineGL"
-        url = "https://github.com/thinkski/ValentineGL"
+        url = "//github.com/thinkski/ValentineGL"
         tagline = "Beating heart screensaver for Mac OS X. Marching cubes algorithm in OpenGL."
         year = "2012"
 
