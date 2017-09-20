@@ -3,7 +3,7 @@
 baseurl = "//chris.hiszpanski.name/"
 languageCode = "en-us"
 title = "Chris Hiszpanski"
-theme = "hugo-orbit-theme"
+theme = "orbit"
 googleAnalytics = "UA-92228276-1"
 
 # Do not build files for websites. Need them? Set to false
