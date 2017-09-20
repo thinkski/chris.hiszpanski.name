@@ -31,7 +31,7 @@ disable404 = false
     # Profile section
     [params.profile]
         name = "Chris Hiszpanski"
-        tagline = "Full Stack Developer"
+        tagline = "Engineer"
         avatar = "profile.png"
 
     # Contact section
@@ -48,12 +48,6 @@ disable404 = false
         icon = "fa-envelope"
         url = "mailto: chris@hiszpanski.name"
         title = "chris@hiszpanski.name"
-
-        [[params.contact.list]]
-        class = "phone"
-        icon = "fa-phone"
-        url = "tel:+1234567890"
-        title = "+1 (650) 394-5862"
 
         [[params.contact.list]]
         class = "github"
