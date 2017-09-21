@@ -144,7 +144,7 @@ disableKinds = [ "RSS", "Sitemap" ]
         enable = true
         icon = "fa-user"
         title = "Chris Hiszpanski"
-        summary = "I enjoy building systems, beautiful state-of-the-art systems which are fault tolerant, scalable, secure, and as simple as possible, systems which optimize across many variables, including cost and development time, to yield beautiful solutions that make the world better. Most recently, I have been developing distributed and machine learning systems. At <a href=\"https://getkuna.com\">Kuna</a>, I created the computer vision platform for an internet-of-things camera network. Previously, I developed embedded systems. I created schematics, printed circuit board layouts, and firmware for a variety of devices, including three software-defined radios, a commercial drone autopilot, and a voice-over-IP telephone."
+        summary = "I enjoy building systems, beautiful state-of-the-art systems which are fault tolerant, scalable, secure, and as simple as possible, systems which optimize across many variables, including cost and development time, to yield elegant solutions which make the world better. Most recently, I have been developing distributed and machine learning systems. At <a href=\"https://getkuna.com\">Kuna</a>, I created the computer vision platform for an internet-of-things camera network. Previously, I developed embedded systems. I created schematics, printed circuit board layouts, and firmware for a variety of devices, including three software-defined radios, a commercial drone autopilot, a voice-over-IP telephone, and a vehicle remote-control and tracking device."
 
     # Experiences section
     [params.experiences]
