@@ -31,7 +31,7 @@ disable404 = false
     # Profile section
     [params.profile]
         name = "Chris Hiszpanski"
-        tagline = "Engineer"
+        tagline = "Technology Polyglot"
         avatar = "profile.png"
 
     # Contact section
@@ -78,25 +78,17 @@ disable404 = false
         dates = "2002 - 2006"
 
     # Languages section
-    [params.languages]
+    [params.language]
         enable = true
         title = "Languages"
 
-        [[params.languages.list]]
+        [[params.language.list]]
         language = "English"
         level = "Native"
 
-        [[params.languages.list]]
+        [[params.language.list]]
         language = "Polish"
         level = "Fluent"
-
-        [[params.languages.list]]
-        language = "Italian"
-        level = "Novice"
-
-        [[params.languages.list]]
-        language = "French"
-        level = "Novice"
 
     # Interests section
     [params.interests]
@@ -116,6 +108,9 @@ disable404 = false
         interest = "Cryptography"
 
         [[params.interests.list]]
+        interest = "Deep learning"
+
+        [[params.interests.list]]
         interest = "Distributed systems"
 
         [[params.interests.list]]
@@ -125,7 +120,13 @@ disable404 = false
         interest = "Gardening"
 
         [[params.interests.list]]
+        interest = "Machine learning"
+
+        [[params.interests.list]]
         interest = "Minimalism"
+
+        [[params.interests.list]]
+        interest = "Reinforcement learning"
 
         [[params.interests.list]]
         interest = "Sailing"
@@ -136,9 +137,6 @@ disable404 = false
         [[params.interests.list]]
         interest = "Signal processing"
 
-        [[params.interests.list]]
-        interest = "Skiing"
-
 # Main body sections
 
     # You may use markdown in summary, details and intro fields. But don't overdose, it's resume!:)
@@ -148,7 +146,7 @@ disable404 = false
         enable = true
         icon = "fa-user"
         title = "Chris Hiszpanski"
-        summary = "Thinker. Doer. Expertise in cloud architecture, computer vision, deep learning, embedded systems, security, and signal processing. Interested in working on challenging technical problems which combat evil and make the world, and particularly the United States, a better place to live."
+        summary = "I enjoy building systems, beautiful state-of-the-art systems which are fault tolerant, scalable, secure, and as simple as possible, systems which optimize across many variables, including cost and development time, to yield beautiful solutions that make the world better. Most recently, I have been developing distributed and machine learning systems. At <a href=\"https://getkuna.com\">Kuna</a>, I created the computer vision platform for an internet-of-things camera network. Previously, I developed embedded systems. I created schematics, printed circuit board layouts, and firmware for a variety of devices, including three software-defined radios, a commercial drone autopilot, and a voice-over-IP telephone."
 
     # Experiences section
     [params.experiences]
@@ -159,30 +157,33 @@ disable404 = false
         [[params.jobs.list]]
         position = "Chief Architect"
         dates = "2014 - Present"
-        company = "Kuna, San Bruno, California"
+        company = "Kuna"
+        location = "San Bruno, California"
         url = "https://getkuna.com"
-        logo = "kuna.png"
         details = "First hire. Built-out much of the early camera firmware, backend cloud architecture, automated testing and CI/CD workflow. Gave birth to Sight, a horizontally scalable, low-latency, cost-efficient, and high-accuracy computer vision pipeline for detecting objects of interest via deep convolutional neural networks on a GPU cluster. Focused on making homes and neighborhoods safer for customers via intelligent camera networks a reality, a neighborhood watch for the 21st century."
 
         [[params.jobs.list]]
         position = "Lead Embedded Software Engineer"
         dates = "2013 - 2014"
-        company = "Airware, San Francisco, California"
+        company = "Airware"
+        location = "San Francisco, California"
         url = "https://airware.com"
-        logo = "airware.png"
         details = "Led firmware team, setting direction and managing sprints. Designed single-board computer for new UAV autopilot product (fixed-wing, quad-copter, VTOL). Developed board support packages for embedded Linux and Micrium uC/OS-II. Designed bootloader and other safety-critical firmware components."
 
         [[params.jobs.list]]
         position = "Software and Hardware Engineer"
         dates = "2006 - 2013"
-        company = "U.S. Department of Defense, Washington, D.C."
+        company = "U.S. Department of Defense"
+        location = "Washington, D.C."
         logo = "dod.png"
 
         [[params.jobs.list]]
         position = "Intern"
         dates = "2002"
-        company = "Jet Propulsion Laboratory, Pasadena, California"
-        logo = "jpl.png"
+        company = "Jet Propulsion Laboratory"
+        location = "Pasadena, California"
+        url = "https://www.jpl.nasa.gov"
+        logo = "nasa.png"
         details = "Designed a firmware bootloader for Rocky 7, a terrestrial testbed for the Mars Exploration Rover (MER). Bootloader instances embedded within rover peripherals accepted Microchip PIC firmware from a VxWorks on-board computer, enabling remote firmware upgrades. Received a full-time firmware engineer job offer based on results."
 
     # Projects section
@@ -206,7 +207,7 @@ disable404 = false
         [[params.projects.list]]
         title = "Solf"
         url = "//thinkski.github.io/solf"
-        tagline = "Interactive solvent finder for chemical engineers"
+        tagline = "Interactive solvent finder for chemical engineers. Single-page client-side app using jQuery and Datatables.js."
         year = "2012"
 
         [[params.projects.list]]
