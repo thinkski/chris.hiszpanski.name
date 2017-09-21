@@ -22,7 +22,7 @@ disableKinds = [ "RSS", "Sitemap" ]
     # are available. Also the source LESS files are included so
     # it’s quick and easy to change the styling and colour scheme.
 
-    styles = "styles.css"
+    styles = "styles.css?20170920"
 
 # Sidebar sections
 
@@ -30,7 +30,7 @@ disableKinds = [ "RSS", "Sitemap" ]
     [params.profile]
         name = "Chris Hiszpanski"
         tagline = "Technology Polyglot"
-        avatar = "profile.png"
+        avatar = "profile.png?20170920"
 
     # Contact section
     [params.contact]
