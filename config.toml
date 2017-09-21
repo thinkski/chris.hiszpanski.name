@@ -7,9 +7,7 @@ theme = "orbit"
 googleAnalytics = "UA-92228276-1"
 
 # Do not build files for websites. Need them? Set to false
-disableRSS = true
-disableSitemap = true
-disable404 = false
+disableKinds = [ "RSS", "Sitemap" ]
 
 [params]
 
