@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Project title -->
+		<title>{{ .Site.Title }} / Projects / {{ .Params.title }}</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	</head>
+	<body onload="init()">
+		<div class="container">
+			<!-- Title -->
+			<h1 class="mt-5" style="text-align: center;">{{ .Params.title }}</h1>
+
+			<!-- Subtitle -->
+			<p class="lead" style="text-align: center;">{{ .Params.subtitle }}</p>
+
+			<!-- Summary -->
+			<div class="row my-4">
+				<div class="col-md-12">{{ .Content }}</div>
+			</div>
+
+			<!-- Demo -->
+			<div class="row">
+				<div class="col-md-8">
+					<figure class="figure">
+						<img id="image" src="/assets/images/cytosight/1.1_20x.png" class="border border-secondary figure-img img-fluid rounded" alt="Microscopy">
+						<figcaption class="figure-caption text-right">20x magnification</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-4" style="text-align: center;">
+					<canvas id="patch" width="200" height="200" class="border border-secondary rounded"></canvas>
+					<div class="mt-4" style="width: 100%; text-align: center;">
+						<h2 id="result" class="text-success">Normal</h2>
+					</div>
+				</div>
+			</div>
+
+			<h2>API</h2>
+			<div class="row my-4">
+				<div class="col-md-12">Feel free to run the network against your own data. Here is how with <code>curl</code> and <code>python</code>:</div>
+			</div>
+
+			<!-- API -->
+			<div>
+				<code class="language-bash" data-lang="bash">curl -X POST -H 'Content-Type: image/jpeg' --data-binary @cell.jpg https://api.hiszpanski.name/cytosight/classify | python -m json.tool</code>
+			</div>
+
+			<!-- Footer -->
+			<footer class="my-5 text-center">
+				Copyright &copy; {{ now.Year }} <a href="/">Chris Hiszpanski</a>. All rights reserved.
+			</footer>
+		</div><!-- //container -->
+
+		<!-- Tail loaded scripts -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script>
+			var canvas, context, naturalWidth, naturalHeight;
+
+			function init() {
+				canvas = document.getElementById('patch');
+				context = canvas.getContext('2d');
+
+				// Initialize patch
+				context.drawImage(document.getElementById('image'), 0, 0, 100, 100, 0, 0, 200, 200);
+
+				// Static size of actual microscopy image
+				naturalWidth = document.getElementById('image').naturalWidth;
+				naturalHeight = document.getElementById('image').naturalHeight;
+			}
+
+			/**
+			 * Mouse click callback
+			 */
+			$('#image').on('mouseup touchend', function(event) {
+				// Get mouse coordinates
+				var offset = $('#image').offset();
+				var x = event.pageX - offset.left;
+				var y = event.pageY - offset.top;
+
+				// Placeholder text while processing. Can replace with animation.
+				$('#result').attr('class', 'text').text('Analyzing...');
+
+				// Post image to backend
+				$.ajax({
+					crossDomain: true,
+					data: document.getElementById('patch').toDataURL(),
+					processData: false,
+					type: "POST",
+					url: "https://api.hiszpanski.name/cytosight/classify"
+				}).done( function(data) {
+					if (data[0]['label'] == 'normal') {
+						$('#result').attr('class', 'text-success').text('Normal');
+					} else {
+						$('#result').attr('class', 'text-danger').text('Abormal');
+					}
+				}).fail( function() {
+					$('#result').attr('class', 'text').text('Error');
+				});
+			});
+
+			/**
+			 * Mouse movement callback
+			 */
+      $('#image').on('mousemove touchmove', function(event) {
+				// On touchscreens, touchmove drags screen. Suppress this action.
+				event.preventDefault();
+
+				// Get mouse coordinates
+				var offset = $('#image').offset();
+				var x = event.pageX - offset.left;
+				var y = event.pageY - offset.top;
+
+				// Transform from client to native image coordinates
+				x = x * naturalWidth / document.getElementById('image').clientWidth;
+				y = y * naturalHeight / document.getElementById('image').clientHeight;
+
+				// Render crop on canvas
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				context.drawImage(document.getElementById('image'), x - 50, y - 50, 100, 100, 0, 0, 200, 200);
+      });
+
+			/**
+			 * Touch start: Clear previous result
+			 */
+			$('#image').on('touchstart', function(event) {
+				$('#result').attr('class', 'text').text('');
+			});
+    </script>
+	</body>
+</html>
+<!-- vim: set ts=2 nowrap: -->

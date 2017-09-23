@@ -191,6 +191,12 @@ disableKinds = [ "RSS", "Sitemap" ]
         title = "Projects"
 
         [[params.projects.list]]
+        title = "Cytosight"
+        url = "/projects/cytosight"
+        tagline = "Machine vision based cytometer. Convolutional neural network running on serverless backend."
+        year = "2017"
+
+        [[params.projects.list]]
         title = "Hashpipe"
         url = "//github.com/thinkski/hashpipe"
         tagline = "VHDL implementation of a systolic SHA-256 hashing engine for Bitcoin. 10x more hashes per joule than a GPU."
