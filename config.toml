@@ -153,18 +153,29 @@ disableKinds = [ "RSS", "Sitemap" ]
         title = "Experiences"
 
         [[params.jobs.list]]
+        position = "Machine Vision Engineer"
+        dates = "2017 - Present"
+        company = "Tesla"
+        location = "Fremont, California"
+        logo = "tesla.png"
+        url = "https://tesla.com"
+        details = "Responsible for architecting and building out deep-learning based machine learning and machine vision systems for automating Model 3 production."
+
+        [[params.jobs.list]]
         position = "Chief Architect"
-        dates = "2014 - Present"
+        dates = "2014 - 2017"
         company = "Kuna"
         location = "San Bruno, California"
+	logo = "kuna.png"
         url = "https://getkuna.com"
-        details = "First hire. Built-out much of the early camera firmware, backend cloud architecture, automated testing and CI/CD workflow. Gave birth to Sight, a horizontally scalable, low-latency, cost-efficient, and high-accuracy computer vision pipeline for detecting objects of interest via deep convolutional neural networks on a GPU cluster. Focused on making homes and neighborhoods safer for customers via intelligent camera networks a reality, a neighborhood watch for the 21st century."
+        details = "First hire. Built-out much of the early camera firmware, backend cloud architecture, automated testing and CI/CD workflow. Gave birth to Sight and Kuna AI, a horizontally scalable, low-latency, cost-efficient, and high-accuracy computer vision pipeline for detecting objects of interest via deep convolutional neural networks on a GPU cluster. Focused on making homes and neighborhoods safer for customers via intelligent camera networks a reality, a neighborhood watch for the 21st century."
 
         [[params.jobs.list]]
         position = "Lead Embedded Software Engineer"
         dates = "2013 - 2014"
         company = "Airware"
         location = "San Francisco, California"
+	logo = "airware.png"
         url = "https://airware.com"
         details = "Led firmware team, setting direction and managing sprints. Designed single-board computer for new UAV autopilot product (fixed-wing, quad-copter, VTOL). Developed board support packages for embedded Linux and Micrium uC/OS-II. Designed bootloader and other safety-critical firmware components."
 
