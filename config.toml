@@ -159,7 +159,7 @@ disableKinds = [ "RSS", "Sitemap" ]
         location = "Fremont, California"
         logo = "tesla.png"
         url = "https://tesla.com"
-        details = "Responsible for architecting and building out deep-learning based machine learning and machine vision systems for automating Model 3 production."
+        details = "Responsible for architecting and building out deep-learning based machine learning and machine vision systems for automating Model 3 general assembly."
 
         [[params.jobs.list]]
         position = "Chief Architect"
