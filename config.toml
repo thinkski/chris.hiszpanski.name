@@ -153,8 +153,17 @@ disableKinds = [ "RSS", "Sitemap" ]
         title = "Experiences"
 
         [[params.jobs.list]]
+        position = "Founder"
+        dates = "2019 - Present"
+        company = "Lanikai Labs"
+        location = "San Mateo, California"
+        logo = "lanikai.png"
+        url = "https://lanikailabs.com"
+        details = "Creating secure, real-time solutions for embedded devices and artificial intelligence."
+
+        [[params.jobs.list]]
         position = "Staff Machine Vision Engineer"
-        dates = "2017 - Present"
+        dates = "2017 - 2019"
         company = "Tesla"
         location = "Fremont, California"
         logo = "tesla.png"
