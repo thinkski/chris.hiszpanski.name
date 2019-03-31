@@ -121,6 +121,10 @@
 				x = x * naturalWidth / document.getElementById('image').clientWidth;
 				y = y * naturalHeight / document.getElementById('image').clientHeight;
 
+				// Limit magnification to image dimensions
+				x = Math.min(naturalWidth - 50, Math.max(50, x))
+				y = Math.min(naturalHeight - 50, Math.max(50, y))
+
 				// Render crop on canvas
 				context.clearRect(0, 0, canvas.width, canvas.height);
 				context.drawImage(document.getElementById('image'), x - 50, y - 50, 100, 100, 0, 0, 200, 200);
