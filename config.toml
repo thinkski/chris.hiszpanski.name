@@ -30,7 +30,7 @@ disableKinds = [ "RSS", "Sitemap" ]
     [params.profile]
         name = "Chris Hiszpanski"
         tagline = "Technology Polyglot"
-        avatar = "profile.png?20170920"
+        avatar = "https://avatars1.githubusercontent.com/u/1595195?s=100&v=4"
 
     # Contact section
     [params.contact]
