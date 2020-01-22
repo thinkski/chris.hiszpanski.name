@@ -22,14 +22,14 @@ disableKinds = [ "RSS", "Sitemap" ]
     # are available. Also the source LESS files are included so
     # it’s quick and easy to change the styling and colour scheme.
 
-    styles = "styles.css?20170920"
+    styles = "styles.css?20200122"
 
 # Sidebar sections
 
     # Profile section
     [params.profile]
         name = "Chris Hiszpanski"
-        tagline = "Technology Polyglot"
+#        tagline = "Software · Embedded · Computer Vision · Linux · Machine Learning"
         avatar = "https://avatars1.githubusercontent.com/u/1595195?s=100&v=4"
 
     # Contact section
@@ -91,49 +91,64 @@ disableKinds = [ "RSS", "Sitemap" ]
     # Interests section
     [params.interests]
         enable = true
-        title = "Interests"
+        title = "Skillsets"
 
         [[params.interests.list]]
         interest = "Artificial intelligence"
 
         [[params.interests.list]]
-        interest = "Board games"
+        interest = "AWS"
 
         [[params.interests.list]]
         interest = "Computer vision"
 
         [[params.interests.list]]
-        interest = "Cryptography"
+        interest = "Cryptography · Security"
 
         [[params.interests.list]]
-        interest = "Deep learning"
+        interest = "Deep learning: Caffe · PyTorch · Tensorflow"
+
+        [[params.interests.list]]
+        interest = "Dev ops: Ansible · Chef · Docker · Kubernetes"
+
+        [[params.interests.list]]
+        interest = "Digital signal processing"
 
         [[params.interests.list]]
         interest = "Distributed systems"
 
         [[params.interests.list]]
-        interest = "Embedded systems"
+        interest = "Embedded systems: Busybox · LTIB · Yocto"
 
         [[params.interests.list]]
-        interest = "Gardening"
+        interest = "FPGAs: VHDL"
+
+        [[params.interests.list]]
+        interest = "Frontend: Preact · TailwindCSS"
+
+        [[params.interests.list]]
+        interest = "Go · C · C++ · Python"
+
+        [[params.interests.list]]
+        interest = "Hardware: Altium · OrCAD"
+
+        [[params.interests.list]]
+        interest = "Linux: Autotools · CMake · Git"
 
         [[params.interests.list]]
         interest = "Machine learning"
 
         [[params.interests.list]]
-        interest = "Minimalism"
+        interest = "OpenGL ES 3.1"
 
         [[params.interests.list]]
         interest = "Reinforcement learning"
 
         [[params.interests.list]]
-        interest = "Sailing"
+        interest = "Reverse engineering"
 
         [[params.interests.list]]
-        interest = "Security"
-
-        [[params.interests.list]]
-        interest = "Signal processing"
+        interest = "WebRTC: DTLS · ICE · RTP · SDP · STUN · TURN"
 
 # Main body sections
 
@@ -159,7 +174,15 @@ disableKinds = [ "RSS", "Sitemap" ]
         location = "San Mateo, California"
         logo = "lanikai.png"
         url = "https://lanikailabs.com"
-        details = "Creating secure, real-time solutions for embedded devices and artificial intelligence."
+        details = '''Lanikai Labs provides real-time video communication for smart cameras, robotics, telepresence, teleoperation and other connected devices.
+
+* Simple. Easy drop-in integration.</li>
+* Secure. End-to-end encrypted video, audio, and remote control.</li>
+* Supported. Connect from any mobile or desktop browser – without plug-ins.
+* Stellar. Crystal clear video, in town or across the globe, even in tough network conditions.
+'''
+#✓ Supported. Connect from any mobile or desktop browser – without plug-ins.
+#✓ Stellar. Crystal clear video, in town or across the globe, even in tough network conditions.
 
         [[params.jobs.list]]
         position = "Staff Machine Vision Engineer"
@@ -209,6 +232,13 @@ disableKinds = [ "RSS", "Sitemap" ]
         enable = true
         icon = "fa-archive"
         title = "Projects"
+
+        [[params.projects.list]]
+        title = "Alohacam"
+        url = "https://alohacam.io"
+        tagline = "Real-time low-latency video communication between a Raspberry Pi and any web browser using WebRTC. Written in Go, Preact. Embedded WebRTC stack written from scratch."
+        year = "2019"
+
 
         [[params.projects.list]]
         title = "Cytosight"
