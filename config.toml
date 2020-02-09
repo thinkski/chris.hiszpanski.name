@@ -174,7 +174,7 @@ disableKinds = [ "RSS", "Sitemap" ]
         location = "San Mateo, California"
         logo = "lanikai.png"
         url = "https://lanikailabs.com"
-        details = '''Lanikai Labs provides real-time video communication for smart cameras, robotics, telepresence, teleoperation and other connected devices.
+        details = '''Lanikai Labs provides [AlohaRTC](https://alohartc.com), a real-time video communication platform for smart cameras, robotics, telepresence, teleoperation and other connected devices.
 
 * Simple. Easy drop-in integration.</li>
 * Secure. End-to-end encrypted video, audio, and remote control.</li>
