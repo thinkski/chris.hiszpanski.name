@@ -168,8 +168,16 @@ disableKinds = [ "RSS", "Sitemap" ]
         title = "Experiences"
 
         [[params.jobs.list]]
+        position = "Software Engineer, Streaming"
+        dates = "2020 - Present"
+        company = "Verkada"
+        location = "San Mateo, California (Remote)"
+        logo = "verkada.png"
+        url = "https://verkada.com"
+
+        [[params.jobs.list]]
         position = "Founder"
-        dates = "2019 - Present"
+        dates = "2019 - 2020"
         company = "Lanikai Labs"
         location = "San Mateo, California"
         logo = "lanikai.png"
@@ -180,18 +188,17 @@ disableKinds = [ "RSS", "Sitemap" ]
 * Secure. End-to-end encrypted video, audio, and remote control.</li>
 * Supported. Connect from any mobile or desktop browser – without plug-ins.
 * Stellar. Crystal clear video, in town or across the globe, even in tough network conditions.
+
+Engineering team acquired by Verkada.
 '''
-#✓ Supported. Connect from any mobile or desktop browser – without plug-ins.
-#✓ Stellar. Crystal clear video, in town or across the globe, even in tough network conditions.
 
         [[params.jobs.list]]
         position = "Staff Machine Vision Engineer"
         dates = "2017 - 2019"
         company = "Tesla"
-        location = "Fremont, California"
+        location = "Palo Alto, California"
         logo = "tesla.png"
         url = "https://tesla.com"
-        details = "Responsible for architecting and building out deep-learning based machine learning and machine vision systems for automating Model 3 general assembly."
 
         [[params.jobs.list]]
         position = "Chief Architect"
