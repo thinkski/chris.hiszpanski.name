@@ -39,7 +39,7 @@ disableKinds = [ "RSS", "Sitemap" ]
         [[params.contact.list]]
         class = "location"
         icon = "fa-map-marker"
-        title = "San Francisco Bay Area"
+        title = "Los Angeles, California"
 
         [[params.contact.list]]
         class = "email"
@@ -127,7 +127,7 @@ disableKinds = [ "RSS", "Sitemap" ]
         interest = "Frontend: Preact · TailwindCSS"
 
         [[params.interests.list]]
-        interest = "Go · C · C++ · Python"
+        interest = "Go · C · Python"
 
         [[params.interests.list]]
         interest = "Hardware: Altium · OrCAD"
