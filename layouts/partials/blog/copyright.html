@@ -1,0 +1,4 @@
+<div class="footer-wrap">
+  <p class="copyright">Copyright {{ now.Year }} {{ with site.Params.footer.copyright }}{{ . | markdownify }}{{ end }}</p>
+    {{- partial "blog/beian.html" . -}}
+</div>

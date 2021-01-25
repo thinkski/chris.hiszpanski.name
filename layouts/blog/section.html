@@ -1,0 +1,11 @@
+{{- define "main" -}}
+{{- $paginator := .Paginator -}}
+
+<section class="article header"><h1>{{- .Title -}}</h1></section>
+{{- partial "blog/section-body.html" . -}}
+<!-- Ranges through content/posts/*.md -->
+
+{{- partial "blog/note-list.html" $paginator -}}
+{{- partial "blog/pagination.html" $paginator -}}
+
+{{- end -}}

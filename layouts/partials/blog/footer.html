@@ -1,0 +1,11 @@
+<section id="footer">
+    {{- $copyright := site.Copyright -}}
+    {{- if not $copyright -}}
+        {{- $copyright = .Site.Params.blog.copyright | safeHTML -}}
+    {{- end -}}
+    {{- partial "blog/copyright.html" ($copyright | safeHTML) -}}
+</section>
+{{- partial "blog/math.html" . -}}
+{{- partial "blog/syntax.html" . -}}
+{{- template "_internal/google_analytics_async.html" . -}}
+{{- partial "blog/custom-js.html" . -}}

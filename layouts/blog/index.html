@@ -1,0 +1,6 @@
+{{- define "main" -}}
+{{- partial "blog/homepage-body.html" . -}}
+{{- $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
+{{- partial "blog/note-list.html" $paginator -}}
+{{- partial "blog/pagination.html" $paginator -}}
+{{- end -}}

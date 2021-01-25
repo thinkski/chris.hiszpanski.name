@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{- site.Language.Lang -}}">
+{{- partial "blog/head.html" . -}}
+
+<body>
+    {{- partial "blog/header.html" . -}}
+    <section id="content">
+        {{- block "main" . -}}{{- end -}}
+    </section>
+    {{- partial "blog/footer.html" . -}}
+</body>
+
+</html>
