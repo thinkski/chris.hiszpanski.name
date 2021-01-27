@@ -1,6 +1,7 @@
 ---
 title: "The Future of Warfare"
 date: 2020-12-12T01:09:35-08:00
+tags: [ "ai" ]
 draft: false
 ---
 

@@ -2,6 +2,7 @@
 title: "The Value of Bitcoin"
 date: 2020-12-27T01:17:10-08:00
 draft: false
+tags: [ "bitcoin", "economics" ]
 ---
 
 What is the value of each Bitcoin? In other words, how high will it go?

@@ -2,6 +2,7 @@
 title: "Optimal Time to Visit the ER"
 date: 2020-12-28T01:20:02-08:00
 draft: false
+tags: [ "covid", "datascience" ]
 ---
 
 My local hospital in southern California publishes emergency room wait time estimates on its website. Unfortunately, only instantaneous data is available. I thought it would be neat to analyze some historical data, so I wrote a script to download it. Here are the results for the first 90 days (Oct - Dec 2020).
