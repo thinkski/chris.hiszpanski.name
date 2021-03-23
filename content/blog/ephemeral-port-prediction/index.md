@@ -1,6 +1,6 @@
 +++
 title = "Ephemeral Port Prediction"
-tags = [ "random" ]
+tags = [ "randomness", "security" ]
 date = 2020-04-05T03:12:25-07:00
 mathjax = true
 scripts = [ "js/ephemeral-port-prediction/demo.js" ]
