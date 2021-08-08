@@ -1,4 +1,6 @@
-version: 2
+version: '2.1'
+orbs:
+  aws-s3: circleci/aws-s3@3.0
 jobs:
   build:
     docker:
@@ -10,32 +12,17 @@ jobs:
       - run:
           name: "Run Hugo"
           command: hugo -v -d /tmp/workspace/public
-      - persist_to_workspace:
-          root: /tmp/workspace
-          paths:
-            - public/*
-
-  deploy:
-    docker:
-      - image: circleci/python:2.7-jessie
-    steps:
-      - attach_workspace:
-          at: /tmp/workspace
-      - run:
-          name: Install awscli
-          command: sudo pip install awscli
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync --size-only --acl public-read --delete --cache-control max-age=300 /tmp/workspace/public/ s3://$S3_BUCKET/
+      - aws-s3/sync:
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=300" \
+            --delete \
+            --size-only
+          from: /tmp/workspace/public/
+          to: s3://chris.hiszpanski.name/
 
 workflows:
   version: 2
   commit:
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
